@@ -22,6 +22,8 @@ public class GetAllJobDetailsService implements IDataParser<JobModel> {
 
         Elements viTris = html.getElementsByClass("big ilabel mkt-track").select("span");
 
+        String luong = html.getElementsByClass("salary-text").text();
+
         String viTri = "";
         for (Element pr: viTris){
             String text = pr.text() + "\t";
@@ -39,7 +41,7 @@ public class GetAllJobDetailsService implements IDataParser<JobModel> {
 
         String tenCty = html.getElementsByClass("name").select("a").text();
 
-
+        result.setLuong(luong);
         result.setTenJob(tenJob);
         result.setAddress(address);
         result.setDescription(descrtiption);

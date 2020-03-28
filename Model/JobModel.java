@@ -7,6 +7,15 @@ public class JobModel {
     private String description;
     private String TimeUpdated;
     private String tenCty;
+    private String luong;
+
+    public String getLuong() {
+        return luong;
+    }
+
+    public void setLuong(String luong) {
+        this.luong = luong;
+    }
 
     public String getTenCty() {
         return tenCty;
@@ -62,8 +71,9 @@ public class JobModel {
                 "\n- TENJOB = " + tenJob + '\n' +
                 "- TEN CONG TY = " + tenCty + '\n' +
                 "- ADDRESS = " + address + '\n' +
-                "- VI TRI = " + viTri + '\n' +
+                "- SKILLS = " + viTri + '\n' +
                 "- DESCRIPTION = " + description + '\n' +
+                "- LUONG = " + luong + '\n' +
                 "- TIMEUPDATED = " + TimeUpdated + '\n' +
                 '}';
     }
